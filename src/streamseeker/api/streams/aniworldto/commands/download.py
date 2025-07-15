@@ -211,18 +211,18 @@ Please don't close this terminal window until it's done.
 
         return show
     
-    def ask_show_type(self, list: list[str]) -> str:
-        if len(list) == 0:
+    def ask_show_type(self, choices: list[str]) -> str:
+        if len(choices) == 0:
             return None
-        
-        if len(list) == 1:
-            return list[0]
-        
+
+        if len(choices) == 1:
+            return choices[0]
+
         choice = self.cli.choice(
             "Choose a show type:",
-            list,
+            choices,
             attempts=3,
-            default=len(list) - 1,
+            default=len(choices) - 1,
         )
         self.cli.line("")
 
@@ -307,14 +307,14 @@ Please don't close this terminal window until it's done.
         
         return choice
 
-    def ask_number(self, label:str, list: list[int]) -> int:
-        if len(list) == 0:
+    def ask_number(self, label: str, choices: list[int]) -> int:
+        if len(choices) == 0:
             return None
-        
-        if len(list) == 1:
-            return list[0]
 
-        _list = list.copy()
+        if len(choices) == 1:
+            return choices[0]
+
+        _list = choices.copy()
         _list.insert(0, "-- Quit --")
 
         choice = self.cli.choice(
