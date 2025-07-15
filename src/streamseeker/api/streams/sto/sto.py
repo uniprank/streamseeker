@@ -380,7 +380,9 @@ class StoStream(StreamBase):
         links = soup.findAll('li', {"data-lang-key": language_key})
 
         if len(links) == 0:
-            return None
+            raise LinkUrlError(
+                f"Could not find a Link for <fg=red>{provider}</> and language {language_key} -> <fg=cyan>{url}</>"
+            )
         
         for link in links:
             # Find a tag that contains an i tag with the title "Hoster {provider}"
