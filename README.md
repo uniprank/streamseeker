@@ -27,7 +27,7 @@ It's pretty simple to use the script. Just follow the instructions on the screen
 
 -   It is possible to search for TV shows and animes
 -   So its easier to find and search for content you need
--   After that you can download (licensense free) content if you want
+-   After that you can download (license-free) content if you want
 
 ## Supported Platforms
 
