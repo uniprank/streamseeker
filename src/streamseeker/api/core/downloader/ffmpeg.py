@@ -12,6 +12,7 @@ class DownloaderFFmpeg:
     ffmpeg_path = "ffmpeg"
 
     def __init__(self, hls_url, file_name, headers: dict={"User-Agent": "Mozilla/5.0"}):
+        self.thread: Thread | None = None
         super().__init__()
         self.hls_url = hls_url
         self.file_name = file_name
