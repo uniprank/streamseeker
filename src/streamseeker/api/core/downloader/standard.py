@@ -26,6 +26,7 @@ class DownloaderStandard:
     ]
 
     def __init__(self, url, file_name, headers: dict={"User-Agent": "Mozilla/5.0"}):
+        self.thread: Thread | None = None
         self.url = url
         self.file_name = file_name
         self.parsed_url = urlparse(url)
