@@ -35,13 +35,13 @@ class StoStream(StreamBase):
         else:
             raise ValueError(f"Command {cli_type} is not supported")
 
-    # Build the url for the serie
-    # name: name of the serie
+    # Build the URL for the series
+    # name: name of the series
     def build_url(self, name, default_url=0):
         return f"{self.urls[default_url]}/serie/stream/{name}"
 
-    # Search for the serie
-    # name: name of the serie
+    # Search for the series
+    # name: name of the series
     def search(self, name):
         types = self.search_types(name)
         movies = []
