@@ -2,7 +2,7 @@ import logging
 import os
 
 from streamseeker.api.core.helpers import Singleton
-from streamseeker.api.core.formatters.base_fomatter import BaseFormatter
+from streamseeker.api.core.formatters.base_formatter import BaseFormatter
 
 LOADING = 24
 SUCCESS = 25

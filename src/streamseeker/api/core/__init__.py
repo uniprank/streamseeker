@@ -1,5 +1,5 @@
 from .classes.base_class import BaseClass
-from .formatters.base_fomatter import BaseFormatter
+from .formatters.base_formatter import BaseFormatter
 
 from .downloader.helper import DownloadHelper
 from .downloader.standard import DownloaderStandard
